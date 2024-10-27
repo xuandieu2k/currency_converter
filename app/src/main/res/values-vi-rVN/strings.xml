@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="amount">Số tiền</string>
+    <string name="converted_amount">Số tiền đã chuyển đổi</string>
+    <string name="conversion_time">Thời gian chuyển đổi</string>
+    <string name="convert">Chuyển đổi</string>
+    <string name="today">Hôm nay</string>
+    <string name="choose_currency">Chọn loại tiền tệ</string>
+    <string name="clear">Xóa</string>
+    <string name="decrease">Giảm</string>
+    <string name="increase">Tăng</string>
+    <string name="done">Xong</string>
+    <string name="enter_money">Nhập số tiền</string>
+    <string name="max_value_input">Giá trị tối đa là</string>
+    <string name="value_invalid">Giá trị không hợp lệ</string>
+    <string name="min_value_of_integer_input">Giá trị  tối thiểu là 1</string>
+    <string name="min_value_of_decimal_input">Giá trị  tối thiểu là 0.01</string>
+    <string name="min_value_of_integer_input_allow_zero_hundred">Giá trị tối thiểu là 0 hoặc 100</string>
+    <string name="conversion_rate">Tỉ giá chuyển đổi</string>
+    <string name="conversion_value">Giá trị chuyển đổi</string>
+    <string name="other_currencies">Các loại tiền tệ khác</string>
+    <string name="no_data">Không có dữ liệu</string>
+    <string name="update_at">Cập nhật lúc</string>
+    <string name="next_update_at">Cập nhật tiếp theo lúc</string>
+    <string name="internet_available">Đã có kết nối mạng</string>
+    <string name="internet_not_available">Đã mất kết nối mạng</string>
+    <string name="enter_code_currency">Nhập mã tiền tệ</string>
+    <string name="money_conversion_not_valid" >Số tiền chuyển đổi phải lớn hơn 0</string>
+    <string name="app_name">Chuyển đổi tiền tệ</string>
+    <string name="check_internet_and_try_again">Kết nối mạng không khả dụng. Vui lòng kiểm tra kết nối và thử lại.</string>
+    <string name="processing">Đang xử lý…</string>
+</resources>

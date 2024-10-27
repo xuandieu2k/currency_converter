@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/dp_16"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <vn.xdeuhug.currency_converter.base.wiget.AppTextViewBold
+        style="@style/TextNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/conversion_rate" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!--        Base Currency            -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dp_2"
+            app:cardCornerRadius="@dimen/dp_200"
+            app:cardElevation="@dimen/dp_2">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvBaseCurrencyMini"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                tools:src="@drawable/us" />
+
+        </androidx.cardview.widget.CardView>
+
+        <vn.xdeuhug.currency_converter.base.wiget.AppTextView
+            android:id="@+id/tvBasePrice"
+            style="@style/TextMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_8"
+            tools:text="1 USD" />
+
+        <vn.xdeuhug.currency_converter.base.wiget.AppTextView
+            style="@style/TextMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_8"
+            android:text="@string/equal"
+            android:textSize="@dimen/sp_16" />
+        <!--        Target Currency            -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:elevation="@dimen/dp_2"
+            app:cardCornerRadius="@dimen/dp_200"
+            app:cardElevation="@dimen/dp_2">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvTargetCurrencyMini"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                tools:src="@drawable/vn" />
+
+        </androidx.cardview.widget.CardView>
+
+        <vn.xdeuhug.currency_converter.base.wiget.AppTextView
+            android:id="@+id/tvTargetPrice"
+            style="@style/TextMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_8"
+            tools:text="25000 VND" />
+
+    </LinearLayout>
+
+    <vn.xdeuhug.currency_converter.base.wiget.AppTextView
+        android:id="@+id/tvUpdateAt"
+        style="@style/TextMini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        tools:text="Update at: 13:00 27/10/2024" />
+
+    <vn.xdeuhug.currency_converter.base.wiget.AppTextView
+        android:id="@+id/tvNextUpdateAt"
+        style="@style/TextMini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        tools:text="Update at: 13:00 28/10/2024" />
+
+</LinearLayout>

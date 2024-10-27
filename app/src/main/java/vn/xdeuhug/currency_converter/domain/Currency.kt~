@@ -1,0 +1,7 @@
+package vn.xdeuhug.currency_converter.domain
+
+/**
+ * @Author: NGUYEN XUAN DIEU
+ * @Date: 25 / 10 / 2024
+ */class Currency {
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="amount">Amount</string>
+    <string name="converted_amount">Converted Amount</string>
+    <string name="conversion_time">Conversion time</string>
+    <string name="convert">Convert</string>
+    <string name="today">Today</string>
+    <string name="choose_currency">Choose Currency</string>
+    <string name="clear">Clear</string>
+    <string name="decrease">Decrease</string>
+    <string name="increase">Increase</string>
+    <string name="done">Done</string>
+    <string name="enter_money">Enter money</string>
+    <string name="max_value_input">Max value is</string>
+    <string name="value_invalid">Value is invalid</string>
+    <string name="min_value_of_integer_input">Min value is 1</string>
+    <string name="min_value_of_decimal_input">Min value is 0.01</string>
+    <string name="min_value_of_integer_input_allow_zero_hundred">Min value is 0 or 100</string>
+    <string name="conversion_rate">Conversion rate</string>
+    <string name="conversion_value">Conversion value</string>
+    <string name="other_currencies">Other currencies</string>
+    <string name="no_data">No Data</string>
+    <string name="update_at">Update at</string>
+    <string name="next_update_at">Next update at</string>
+    <string name="internet_available">Network connection available</string>
+    <string name="internet_not_available">Network connection not available</string>
+    <string name="enter_code_currency">Enter code currency</string>
+    <string name="money_conversion_not_valid" >The conversion amount must be greater than 0</string>
+    <string name="app_name">Currency Converter</string>
+    <string name="check_internet_and_try_again">Network connection unavailable. Please check your connection and try again.</string>
+    <string name="processing">Processing...</string>
+</resources>
