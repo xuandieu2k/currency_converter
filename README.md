@@ -21,7 +21,7 @@ A simple Currency Converter app built with Kotlin for Android. The app allows us
 
 # File APK
 
-[File here](https://github.com/xuandieu2k/currency_converter/app-release.apk)
+[File here](https://github.com/xuandieu2k/currency_converter/blob/main/app-release.apk)
 
 
 
