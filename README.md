@@ -95,4 +95,3 @@ The Challenge 2 source code is stored in the Challenge 2 directory of the origin
 
 - **API Constraints**: The free tier of ExchangeRate-API may have rate limits.
 - **Testing Limitations**: Due to limited time, tests focus on core functionality, with room for expanding coverage.
-
