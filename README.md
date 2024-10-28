@@ -91,10 +91,14 @@ The solutions to the coding exercises are provided in the `Challenge2` folder. E
 
 ---
 
+# Result
+
+<img src="./screenshots/result.png" alt="Result Challenge 2"/>
+
 ## Store
 
 The Challenge 2 source code is stored in the Challenge 2 directory of the original source code and is located in the Main.kt file.
-[Here](https://github.com/xuandieu2k/currency_converter/tree/main/Challenge2)
+[Here](https://github.com/xuandieu2k/currency_converter/blob/main/Challenge2/app/src/main/java/vn/xdeuhug/challenge2/Main.kt)
 
 
 ## Notes & Challenges

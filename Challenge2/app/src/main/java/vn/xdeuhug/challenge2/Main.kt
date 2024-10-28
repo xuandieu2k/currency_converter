@@ -59,16 +59,23 @@ fun main() {
 
     val inventory = Inventory(products)
 
-    // Perform tasks with the warehouse
-    println("Question 2.1. Product Inventory Management"+"\n")
+    // Display initial product list
+    println("Question 2.1. Product Inventory Management\n")
+    println("Initial product list:")
+    products.forEach { println("Product: ${it.name}, Price: ${it.price}, Quantity: ${it.quantity}") }
+
+    // Perform tasks with the inventory
+    println("\nResults:")
     println("Total inventory value: ${inventory.totalInventoryValue()}")
     println("Most expensive product: ${inventory.mostExpensiveProduct()}")
     println("The product 'Headphones' is in stock: ${inventory.isProductInStock("Headphones")}")
     val sortedByPrice = inventory.sortProducts(by = "price", descending = true)
-    println("Products are sorted by price in descending order: ${sortedByPrice.map { it.name to it.price }}"+"\n"+"\n")
+    println("Products sorted by price in descending order: ${sortedByPrice.map { it.name to it.price }}\n")
 
-    // Check for missing numbers in the array
+    // Array for missing number check
     val arr = listOf(3, 7, 1, 2, 6, 4)
-    println("Question 2.2.  Array Manipulation and Missing Number Problem"+"\n")
-    println("Number is missing: ${findMissingNumber(arr)}")
+    println("Question 2.2. Array Manipulation and Missing Number Problem\n")
+    println("Initial array: $arr")
+    println("Missing number: ${findMissingNumber(arr)}")
+
 }
