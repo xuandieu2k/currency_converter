@@ -83,5 +83,11 @@ Wapp/src/main/java/vn/xdeuhug/currency_converter/presentation/ui/dialog/LoadingD
 local.properties,0\7\0712df971a99ac4d2fccb8e0fb19f377f3374cca
 x
 Happ/src/test/java/vn/xdeuhug/currency_converter/CurrencyViewModelTest.kt,5\a\5ac1e9e3dcbf617aa5ec1e621e9fb358f667330d
-m
-=app/src/test/java/vn/xdeuhug/currency_converter/TestModule.kt,0\2\020c333fd2250af90fd58b3714c3db93f90d075d
+Q
+!Challenge2/Question2_1/Product.kt,0\f\0f70b2ac46ac6dae68f35d2cb0f8d11df32e6b6c
+w
+Gapp/src/main/java/vn/xdeuhug/currency_converter/domain/model/Product.kt,2\8\289cabedd08e0c7eaf82c8a6b42ddcaf35ac71bf
+t
+Dapp/src/main/java/vn/xdeuhug/currency_converter/domain/model/Main.kt,d\9\d971009c5ccea39e00ac7c13db23a1b6a98fd57a
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

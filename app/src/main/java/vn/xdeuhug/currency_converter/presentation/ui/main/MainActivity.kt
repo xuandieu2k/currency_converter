@@ -26,6 +26,7 @@ import vn.xdeuhug.currency_converter.utils.AppConstants
 import vn.xdeuhug.currency_converter.utils.AppUtils
 import vn.xdeuhug.currency_converter.utils.AppUtils.setOnChildClickListener
 import vn.xdeuhug.currency_converter.utils.CurrencyUtils
+import vn.xdeuhug.currency_converter.utils.Resource
 import java.math.BigDecimal
 
 /**
@@ -143,30 +144,56 @@ class MainActivity : AppActivity(), CurrencyConvertedAdapter.OnListenerItemSelec
             }
         }
 
-        viewModel.allCurrencies.observe(this) { listCurrency ->
-            lifecycleScope.launch(Dispatchers.IO) {
-                val updatedList = if (listCurrency.isNotEmpty()) {
-                    listCurrency.values.toList()
-                } else {
-                    emptyList()
-                }
-                withContext(Dispatchers.Main) {
-                    if (updatedList.isNotEmpty()) {
-                        currencyConvertedAdapter.setBaseCode(
-                            viewModel.baseCode.value ?: AppConstants.USD
-                        )
-                        currencyConvertedAdapter.setValueConversion(
-                            viewModel.amount.value ?: BigDecimal.ONE
-                        )
-
-                        this@MainActivity.listCurrency.clear()
-                        this@MainActivity.listCurrency.addAll(updatedList)
-                        currencyConvertedAdapter.notifyDataSetChanged()
-                        showLayoutMoreData(isShow = true, isHaveData = true)
-                    } else {
-                        showLayoutMoreData(isShow = true, isHaveData = false)
+        /**
+         * @param resource
+         * resource is Loading: show dialog Loading
+         * resource is Success: update data, layout and hide dialog
+         * resource is Error: hide dialog and show notification error
+         */
+        viewModel.allCurrencies.observe(this) { resource ->
+            when (resource) {
+                is Resource.Loading -> {
+                    lifecycleScope.launch(Dispatchers.Main) {
+                        showDialog()
                     }
-                    hideDialog()
+                }
+                is Resource.Success -> {
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        val listCurrency = resource.data ?: emptyMap()
+                        val updatedList = if (listCurrency.isNotEmpty()) {
+                            listCurrency.values.toList()
+                        } else {
+                            emptyList()
+                        }
+
+                        withContext(Dispatchers.Main) {
+                            if (updatedList.isNotEmpty()) {
+                                currencyConvertedAdapter.setBaseCode(
+                                    viewModel.baseCode.value ?: AppConstants.USD
+                                )
+                                currencyConvertedAdapter.setValueConversion(
+                                    viewModel.amount.value ?: BigDecimal.ONE
+                                )
+
+                                this@MainActivity.listCurrency.clear()
+                                this@MainActivity.listCurrency.addAll(updatedList)
+                                currencyConvertedAdapter.notifyDataSetChanged()
+                                showLayoutMoreData(isShow = true, isHaveData = true)
+                            } else {
+                                showLayoutMoreData(isShow = true, isHaveData = false)
+                            }
+                            hideDialog()
+                        }
+                    }
+                }
+                is Resource.Error -> {
+                    val errorMessage = resource.message ?: "An unknown error occurred"
+                    lifecycleScope.launch(Dispatchers.Main) {
+                        resetTempData()
+                        showLayoutMoreData(isShow = false, isHaveData = false)
+                        Toast.makeText(this@MainActivity, errorMessage, Toast.LENGTH_SHORT).show()
+                        hideDialog()
+                    }
                 }
             }
         }
@@ -273,7 +300,6 @@ class MainActivity : AppActivity(), CurrencyConvertedAdapter.OnListenerItemSelec
         if ((viewModel.amount.value ?: BigDecimal.ZERO) <= BigDecimal.ZERO) {
             AppUtils.showToast(this, getString(R.string.money_conversion_not_valid))
         } else {
-            showDialog()
             if (viewModel.baseCode.value == tempCode && viewModel.targetCode.value == tempTargetCode && viewModel.amount.value != BigDecimal.ZERO && listCurrency.isNotEmpty()) {
                 viewModel.convertLocalAllCurrencies()
                 return

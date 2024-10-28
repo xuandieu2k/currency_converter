@@ -4,45 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="@dimen/dp_4"
     android:gravity="center_vertical"
-    android:padding="@dimen/dp_8">
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="@dimen/dp_2"
-        app:cardCornerRadius="@dimen/dp_200"
-        app:cardElevation="@dimen/dp_2">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imvLogoCurrency"
-            android:layout_width="@dimen/dp_40"
-            android:layout_height="@dimen/dp_40"
-            tools:src="@drawable/vn" />
-
-    </androidx.cardview.widget.CardView>
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_16"
+        android:padding="@dimen/dp_8"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <vn.xdeuhug.currency_converter.base.wiget.AppTextViewBold
-            android:id="@+id/tvCurrencyCode"
-            style="@style/TextNormal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="@dimen/sp_16"
-            tools:text="VND" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imvCheck"
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_tick" />
+            android:elevation="@dimen/dp_2"
+            app:cardCornerRadius="@dimen/dp_200"
+            app:cardElevation="@dimen/dp_2">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvLogoCurrency"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                tools:src="@drawable/vn" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <vn.xdeuhug.currency_converter.base.wiget.AppTextViewBold
+                android:id="@+id/tvCurrencyCode"
+                style="@style/TextNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_16"
+                tools:text="VND" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tick" />
+        </LinearLayout>
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:background="@color/gray_200"/>
+
 </LinearLayout>

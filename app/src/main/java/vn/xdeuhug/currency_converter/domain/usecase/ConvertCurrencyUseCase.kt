@@ -1,7 +1,9 @@
 package vn.xdeuhug.currency_converter.domain.usecase
 
+import android.util.Log
 import vn.xdeuhug.currency_converter.domain.model.ConversionResult
 import vn.xdeuhug.currency_converter.domain.repository.CurrencyRepository
+import vn.xdeuhug.currency_converter.utils.Resource
 import java.math.BigDecimal
 import javax.inject.Inject
 
@@ -25,18 +27,20 @@ class ConvertCurrencyUseCase @Inject constructor(
         }, onFailure = { throw it })
     }
 
-    suspend fun getAllCurrencies(baseCurrency: String, targetCurrency: String): ConversionResult {
+    suspend fun getAllCurrencies(
+        baseCurrency: String,
+        targetCurrency: String
+    ): Resource<ConversionResult> {
         val ratesResult = repository.getExchangeRates(baseCurrency, targetCurrency)
-        return ratesResult.fold(onSuccess = { conversionResult ->
-            conversionResult
-        }, onFailure = {
-            ConversionResult(
-                baseCurrency = "",
-                targetCurrency = "",
-                rates = hashMapOf(),
-                timeLastUpdateUtc = "",
-                timeNextUpdateUtc = ""
-            )
-        })
+
+        return ratesResult.fold(
+            onSuccess = { conversionResult ->
+                Resource.Success(conversionResult)
+            },
+            onFailure = {
+                Log.e("Log Error API Call: ", it.message.toString())
+                Resource.Error("Failed to retrieve exchange rates:  ${it.message}")
+            }
+        )
     }
 }

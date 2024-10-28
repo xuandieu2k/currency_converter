@@ -8,7 +8,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatDialog
 import vn.xdeuhug.currency_converter.R
 import vn.xdeuhug.currency_converter.databinding.CalculatorDialogBinding
@@ -19,6 +18,9 @@ import java.math.BigDecimal
 /**
  * @Author: NGUYEN XUAN DIEU
  * @Date: 26 / 10 / 2024
+ */
+/**
+ *
  */
 class CalculatorDialog {
     class Builder(
@@ -189,6 +191,10 @@ class CalculatorDialog {
             }
         }
 
+        /**
+         * Process strings with decimals and display messages if the result does not match
+         * Then return the new processed value for @param currentNumber
+         */
         private fun customCurrentNumber(keyNumber: String) {
             currentNumber = if (key == AppConstants.DECIMAL_INPUT_TABLE) {
                 val newValue = "$currentNumber$keyNumber".toBigDecimalOrNull()

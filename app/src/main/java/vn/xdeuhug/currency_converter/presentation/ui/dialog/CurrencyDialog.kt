@@ -34,6 +34,10 @@ class CurrencyDialog {
             this.listener = listener
         }
 
+        /**
+         * Search current selected index and uncheck
+         * Update new selected index location
+         */
         fun setCodeCurrency(code: String) {
             this.codeCurrency = code
             val previousSelectedIndex = listData.indexOfFirst { it.isSelected }
@@ -73,6 +77,9 @@ class CurrencyDialog {
 
         }
 
+        /**
+         * Set up search
+         */
         private fun initSearch() {
             binding.svCurrency.queryAfterTextChanged(1000) {
                 if (it.isEmpty()) {
@@ -84,6 +91,9 @@ class CurrencyDialog {
             }
         }
 
+        /**
+         * Check if currency code or currency name contains keyword then add to list
+         */
         private fun search(query: String) {
             listSearch.clear()
             listData.filter {

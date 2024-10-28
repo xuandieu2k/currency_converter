@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:elevation="@dimen/dp_4"
+    app:cardCornerRadius="@dimen/dp_8"
     app:cardElevation="@dimen/dp_4">
 
 
@@ -12,12 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="@dimen/dp_16"
-        android:paddingBottom="@dimen/dp_16">
+        android:paddingHorizontal="@dimen/dp_16">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_8">
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/btnClose"
@@ -27,17 +29,21 @@
                 android:layout_centerVertical="true"
                 android:background="@null"
                 android:src="@drawable/ic_close"
-                android:tint="@color/text_common_color" />
+                android:tint="@color/gray_600" />
 
             <vn.xdeuhug.currency_converter.base.wiget.AppTextViewBold
                 style="@style/TextNormal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginVertical="@dimen/dp_16"
                 android:text="@string/choose_currency"
                 android:textSize="@dimen/sp_24" />
         </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:background="@color/gray_200"/>
 
         <vn.xdeuhug.currency_converter.base.wiget.SearchViewCustom
             android:id="@+id/svCurrency"
@@ -45,6 +51,7 @@
             android:layout_height="@dimen/dp_40"
             android:layout_marginVertical="@dimen/dp_8"
             android:background="@drawable/bg_edit_text"
+            android:backgroundTint="@color/gray_100"
             android:focusable="false"
             android:gravity="center_vertical"
             android:theme="@style/SearchView"

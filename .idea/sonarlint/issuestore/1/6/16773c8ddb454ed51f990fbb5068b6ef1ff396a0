@@ -1,4 +1,4 @@
 
-_kotlin:S1128"Remove this unused import.(´Ùí8—§ºô¬2J$1988a212-7d2b-4ead-aa0b-072daac2b2ad
-˜kotlin:S3776À"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(¡ù€²8’ğ«æ¬2J$f3688923-6b82-4a43-b7ff-9dbdae9365d9
-akotlin:S6510Ì"AMove "return" statements from all branches before "if" statement.(ÅÍŸì8òÕ¼ô¬2
+˜kotlin:S3776Æ"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(¡ù€²8’ğ«æ¬2J$c9bd21e9-9c95-4c07-8250-c91c947bd698
+kotlin:S6517’"BMake this interface functional or replace it with a function type.(Ïîåèøÿÿÿÿ8­Áô‰­2J$03e8d9c1-fe8a-4b21-97c0-9a6f4d23c221
+Œkotlin:S6510Ğ"AMove "return" statements from all branches before "if" statement.(ŸÌş€ÿÿÿÿÿ8°Áô‰­2J$fd945008-a8ce-4f37-8d72-d6216b420f19

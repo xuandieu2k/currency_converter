@@ -25,5 +25,6 @@
         android:gravity="center"
         android:paddingVertical="@dimen/dp_4"
         android:text="@string/processing"
+        android:textColor="@color/main_bg"
         android:textStyle="bold" />
 </LinearLayout>
