@@ -91,3 +91,5 @@ t
 Dapp/src/main/java/vn/xdeuhug/currency_converter/domain/model/Main.kt,d\9\d971009c5ccea39e00ac7c13db23a1b6a98fd57a
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+E
+app/gradle.properties,9\4\94e3e10af8bb8062a0d4e9b8f6ce8b7daeeb814f

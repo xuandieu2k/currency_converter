@@ -2,6 +2,7 @@
 # Currency Converter App
 <img src="./screenshots/logo_App.png" alt="Logo App"/>
 A simple Currency Converter app built with Kotlin for Android. The app allows users to input an amount, select currencies to convert from and to, and view live converted currency values using exchange rates from ExchangeRate-API. The app is developed using MVVM architecture and clean architecture principles to ensure separation of concerns and maintainable code structure.
+
 ## Pictures
 
 <div style="display: flex; justify-content: space-between;">
@@ -18,10 +19,15 @@ A simple Currency Converter app built with Kotlin for Android. The app allows us
   <img src="./screenshots/11.png" alt="Playlist View 11" style="height: 360px; width: auto;"/>
 </div>
 
+# File APK
+
+[File here](https://github.com/xuandieu2k/currency_converter/app-release.apk)
+
+
 
 ## Demo
 
-A video demonstrating the app's key features is available at [Demo Video Link](https://www.youtube.com/watch?v=qHseWzS93es)(#).
+A video demonstrating the app's key features is available at [Demo Video Link](https://www.youtube.com/watch?v=qHseWzS93es).
 
 ## Features
 
@@ -88,7 +94,7 @@ The solutions to the coding exercises are provided in the `Challenge2` folder. E
 ## Store
 
 The Challenge 2 source code is stored in the Challenge 2 directory of the original source code and is located in the Main.kt file.
-[Here](https://github.com/xuandieu2k/currency_converter/Challenge2)
+[Here](https://github.com/xuandieu2k/currency_converter/tree/main/Challenge2)
 
 
 ## Notes & Challenges

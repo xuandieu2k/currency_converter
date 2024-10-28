@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -19,14 +21,32 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    // Load the keystore properties
+    val keystoreProperties = Properties()
+    val keystoreFile = project(":app").file("keystore.properties")
+    if (keystoreFile.exists()) {
+        keystoreProperties.load(keystoreFile.inputStream())
+    }
+
+    signingConfigs {
+        create("release") {
+            keyAlias = keystoreProperties["KeyAlias"] as String?
+            keyPassword = keystoreProperties["KeyPassword"] as String?
+            storeFile = (keystoreProperties["StoreFile"] as String?)?.let { file(it) }
+            storePassword = keystoreProperties["StorePassword"] as String?
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -44,7 +64,6 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
-
 
     kapt {
         correctErrorTypes = true
